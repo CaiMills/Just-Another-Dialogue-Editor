@@ -5,7 +5,7 @@ public partial class MainMenu : Control
 {
     private void _on_start_pressed()
     {
-        GUIManager._instance.ChangeGui(this, "DialogueGraph");
+        GUIManager._instance.ChangeGui(this, "DialogueGraph", true);
     }
     
     private void _on_exit_pressed()

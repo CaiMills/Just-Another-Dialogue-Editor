@@ -318,6 +318,6 @@ public partial class DialogueManagerEditorWindow : Control
 
     private void _on_exit_button_pressed()
     {
-        GUIManager._instance.ChangeGui(this, "MainMenu");
+        GUIManager._instance.ChangeGui(this, "MenuConfirmation", false);
     }
 }
