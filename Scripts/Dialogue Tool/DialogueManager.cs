@@ -1,4 +1,3 @@
-/*
 using Godot;
 using System;
 using System.Text.Json;
@@ -44,7 +43,7 @@ public partial class DialogueManager : Control
     
     public override void _Process(double delta)
     {
-        if (Input.IsActionJustPressed("ui_accept") && GUIManager._instance._isMenuActive && !_isChoosing)
+        if (Input.IsActionJustPressed("ui_accept") && !_isChoosing)
         {
             if (_dialogueText.VisibleCharacters == _dialogueText.Text.Length)
             {
@@ -78,8 +77,7 @@ public partial class DialogueManager : Control
             {
                 _lineId = 0;
                 _currentLine = _script.conversation[_lineId];
-
-                GUIManager._instance._isMenuActive = true;
+                
                 ClearDialogue();
                 Show();
 
@@ -249,10 +247,8 @@ public partial class DialogueManager : Control
     /// </summary>
     private void EndConversation()
     {
-        GUIManager._instance._isMenuActive = false;
         this.Hide();
         _script.conversation.Clear();
         _lineId = 0;
     }
 }
-*/

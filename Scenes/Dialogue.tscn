@@ -1,0 +1,99 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc4uxgj50fd4l"]
+
+[ext_resource type="Script" uid="uid://55x2ppevrgei" path="res://Scripts/Dialogue Tool/DialogueManager.cs" id="1_hecdn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1kyd"]
+bg_color = Color(7.70092e-07, 0.244313, 0.347775, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0wq4"]
+bg_color = Color(0, 0.243137, 0.34902, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_0v7gd"]
+
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hecdn")
+
+[node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 728.0
+offset_right = 942.0
+offset_bottom = 840.0
+scale = Vector2(2.88273, 2.73658)
+theme_override_styles/panel = SubResource("StyleBoxFlat_r1kyd")
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 4.0
+offset_right = 439.0
+offset_bottom = 107.0
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Dialogue Text Goes Here..."
+fit_content = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 441.0
+offset_bottom = 108.0
+
+[node name="ChoicesVBoxContainer" type="VBoxContainer" parent="DialogueBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="NameBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 167.0
+offset_top = 632.0
+offset_right = 439.0
+offset_bottom = 664.0
+scale = Vector2(2.88273, 2.7366)
+theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
+
+[node name="NameText" type="RichTextLabel" parent="NameBox"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 266.0
+offset_bottom = 29.0
+theme = SubResource("Theme_0v7gd")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Character Name..."
+fit_content = true
+vertical_alignment = 1
+
+[node name="PortraitBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 728.0
+offset_right = 276.0
+offset_bottom = 840.0
+scale = Vector2(2.88273, 2.73658)
+theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
+
+[node name="Portrait" type="TextureRect" parent="PortraitBox"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 107.0
+offset_bottom = 108.0
+expand_mode = 1

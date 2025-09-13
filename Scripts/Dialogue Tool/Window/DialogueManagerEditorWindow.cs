@@ -15,7 +15,7 @@ public partial class DialogueManagerEditorWindow : Control
     public override void _Ready()
     {
         _graph = GetNode<GraphEdit>("GraphEdit");
-        _dialogueNode = GD.Load<PackedScene>("res://Dialogue Tool/Nodes/Dialogue_Node.tscn");
+        _dialogueNode = GD.Load<PackedScene>("res://Scripts/Dialogue Tool/Nodes/DialogueNode.tscn");
     }
     
     /// <summary>

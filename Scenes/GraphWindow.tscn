@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bl30j0x7m1dto"]
 
-[ext_resource type="Script" uid="uid://dif6xlbca88mu" path="res://Dialogue Tool/Window/DialogueManagerEditorWindow.cs" id="1_nscuq"]
+[ext_resource type="Script" uid="uid://dif6xlbca88mu" path="res://Scripts/Dialogue Tool/Window/DialogueManagerEditorWindow.cs" id="1_fkxa1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h1eu"]
 bg_color = Color(0.099986, 0.099986, 0.099986, 1)
@@ -31,7 +31,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_nscuq")
+script = ExtResource("1_fkxa1")
 
 [node name="Background" type="Panel" parent="."]
 layout_mode = 1

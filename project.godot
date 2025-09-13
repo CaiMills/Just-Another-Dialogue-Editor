@@ -12,8 +12,12 @@ config_version=5
 
 config/name="Just Another Dialogue Editor"
 run/main_scene="uid://bl30j0x7m1dto"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://Assets/Character Portraits/icon.svg"
+
+[autoload]
+
+GuiManager="*res://Scripts/Autoloads/GUIManager.cs"
 
 [display]
 
