@@ -17,17 +17,30 @@ public partial class DialogueManagerEditorWindow : Control
         _graph = GetNode<GraphEdit>("GraphEdit");
         _dialogueNode = GD.Load<PackedScene>("res://Scripts/Dialogue Tool/Nodes/DialogueNode.tscn");
     }
+
+    public override void _Input(InputEvent @event)
+    {
+        if (Input.IsActionJustPressed("Right Click"))
+        {
+            CreateDialogueNode(GetGlobalMousePosition());
+        }
+    }
     
     /// <summary>
     /// This adds a new dialogue node object to the graph
     /// </summary>
     private void _on_add_dialogue_button_pressed()
     {
+        CreateDialogueNode(_defaultPos);
+    }
+
+    private void CreateDialogueNode(Vector2 position)
+    {
         DialogueNode node = (DialogueNode)_dialogueNode.Instantiate();
         
         node.Title += _flowchartData.Count;
         node._dialogue.id = _flowchartData.Count;
-        node.PositionOffset += _defaultPos;
+        node.PositionOffset += position;
         
         _graph.AddChild(node);
         _flowchartData.Add(node);
@@ -301,5 +314,10 @@ public partial class DialogueManagerEditorWindow : Control
             }
         }
         _selectedNodes.Clear();
+    }
+
+    private void _on_exit_button_pressed()
+    {
+        GUIManager._instance.ChangeGui(this, "MainMenu");
     }
 }

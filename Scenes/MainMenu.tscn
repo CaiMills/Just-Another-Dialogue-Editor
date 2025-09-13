@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=3 uid="uid://5in73spm7ib0"]
+
+[ext_resource type="Script" uid="uid://c4dh73f8dc2a2" path="res://Scripts/MainMenu.cs" id="1_tt5f1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bnhvo"]
+bg_color = Color(0, 0.113725, 0.227451, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tt5f1"]
+content_margin_left = 150.0
+content_margin_right = 150.0
+bg_color = Color(0.0588235, 0.105882, 0.14902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8saeu"]
+content_margin_left = 180.0
+content_margin_right = 180.0
+bg_color = Color(0.0588235, 0.105882, 0.14902, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tt5f1")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bnhvo")
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -827.0
+offset_top = 81.0
+offset_right = 828.0
+offset_bottom = 523.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/bold_italics_font_size = 66
+theme_override_font_sizes/normal_font_size = 161
+text = "Just Another Dialogue Editor"
+fit_content = true
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = 69.0
+offset_right = 270.0
+offset_bottom = 554.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_tt5f1")
+text = "Start
+"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 30
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_8saeu")
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

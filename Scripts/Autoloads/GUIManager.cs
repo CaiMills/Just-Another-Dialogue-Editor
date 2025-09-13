@@ -6,8 +6,10 @@ public partial class GUIManager : CanvasLayer
     
     private string[] _guiComponents =
     [
-        "res://Scenes/GraphWindow.tscn",
-        "res://Scenes/Dialogue.tscn"
+        "res://Scenes/MainMenu.tscn",
+        "res://Scenes/DialogueGraph.tscn",
+        "res://Scenes/Dialogue.tscn",
+        "res://Scenes/MenuConfrimation.tscn"
     ];
     
     [Signal] public delegate void DialogueActivateEventHandler(string jsonPath);
@@ -38,6 +40,13 @@ public partial class GUIManager : CanvasLayer
         
         // Connects signals
         Connect("DialogueActivate", new Callable(this, nameof(DialogueGui)));
+    }
+
+    public void ChangeGui(Control currentGui, string newGui)
+    {
+        currentGui.Visible = false;
+        Control gui = GetNode<Control>(newGui);
+        gui.Visible = true;
     }
     
     private void DialogueGui(string jsonPath)
