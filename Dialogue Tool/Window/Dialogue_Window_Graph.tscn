@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl30j0x7m1dto"]
+
+[ext_resource type="Script" uid="uid://dif6xlbca88mu" path="res://Dialogue Tool/Window/DialogueManagerEditorWindow.cs" id="1_nscuq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h1eu"]
+bg_color = Color(0.099986, 0.099986, 0.099986, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyfxn"]
+bg_color = Color(0, 0.113028, 0.228367, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nscuq"]
+bg_color = Color(0, 0.371263, 0.582393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u48pm"]
+bg_color = Color(0, 0.371263, 0.582393, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="DialogueJSONFlowchart" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nscuq")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0h1eu")
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/port_hotzone_inner_extent = 0
+theme_override_constants/connection_hover_thickness = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pyfxn")
+right_disconnects = true
+minimap_enabled = false
+minimap_size = Vector2(60, 50)
+show_zoom_label = true
+
+[node name="AddDialogueButton" type="Button" parent="."]
+layout_mode = 2
+offset_right = 106.0
+offset_bottom = 32.0
+tooltip_text = "Creates a new line of dialogue in your conversation."
+theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
+text = "+ Dialogue"
+
+[node name="LoadFileButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 112.0
+offset_right = 218.0
+offset_bottom = 32.0
+tooltip_text = "Loads a serialized json file (must have been created by this tool)."
+theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
+text = "Load File"
+
+[node name="SaveFileButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 224.0
+offset_right = 330.0
+offset_bottom = 32.0
+tooltip_text = "Serializes this conversation to a .json file for it to be deserialized in your scene."
+theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
+text = "Save File"
+
+[node name="ClearAllButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 336.0
+offset_right = 442.0
+offset_bottom = 32.0
+tooltip_text = "Serializes this conversation to a .json file for it to be deserialized in your scene."
+theme_override_styles/normal = SubResource("StyleBoxFlat_u48pm")
+text = "Clear All"
+
+[connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
+[connection signal="delete_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_delete_nodes_request"]
+[connection signal="disconnection_request" from="GraphEdit" to="." method="_on_graph_edit_disconnection_request"]
+[connection signal="node_deselected" from="GraphEdit" to="." method="_on_graph_edit_node_deselected"]
+[connection signal="node_selected" from="GraphEdit" to="." method="_on_graph_edit_node_selected"]
+[connection signal="pressed" from="AddDialogueButton" to="." method="_on_add_dialogue_button_pressed"]
+[connection signal="pressed" from="LoadFileButton" to="." method="_on_load_file_button_pressed"]
+[connection signal="pressed" from="SaveFileButton" to="." method="_on_save_file_button_pressed"]
+[connection signal="pressed" from="ClearAllButton" to="." method="_on_clear_all_button_pressed"]

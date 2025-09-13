@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Just Another Dialogue Editor"
+run/main_scene="uid://bl30j0x7m1dto"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/Character Portraits/icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 
