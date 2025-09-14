@@ -16,6 +16,8 @@ public partial class DialogueManagerEditorWindow : Control
     {
         _graph = GetNode<GraphEdit>("GraphEdit");
         _dialogueNode = GD.Load<PackedScene>("res://Scripts/Dialogue Tool/Nodes/DialogueNode.tscn");
+        
+        ClearAll();
     }
 
     public override void _Input(InputEvent @event)
@@ -203,8 +205,13 @@ public partial class DialogueManagerEditorWindow : Control
             }
         }
     }
-
-    /// <summary>
+    
+    private void _on_exit_button_pressed()
+    {
+        GUIManager._instance.ChangeGui(null, "MenuConfirmation", false);
+    }
+    
+        /// <summary>
     /// This handles the deletion of the dialogue nodes, as well as removing them from any lists
     /// </summary>
     /// <param name="node"></param>
@@ -314,10 +321,5 @@ public partial class DialogueManagerEditorWindow : Control
             }
         }
         _selectedNodes.Clear();
-    }
-
-    private void _on_exit_button_pressed()
-    {
-        GUIManager._instance.ChangeGui(this, "MenuConfirmation", false);
     }
 }

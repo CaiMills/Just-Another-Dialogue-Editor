@@ -1,0 +1,65 @@
+{
+  "_conversation": [
+    {
+      "_id": 0,
+      "_name": "Cai",
+      "_text": "Test 1, hopefully this works",
+      "_textSpeed": 0.1,
+      "_portraitPath": null,
+      "_connectsTo": 1,
+      "_choices": [],
+      "_offsetX": 20,
+      "_offsetY": 80,
+      "_width": 504,
+      "_height": 296
+    },
+    {
+      "_id": 1,
+      "_name": "Cai",
+      "_text": "Did this work?",
+      "_textSpeed": 0.1,
+      "_portraitPath": null,
+      "_connectsTo": -1,
+      "_choices": [
+        {
+          "_text": "Yes",
+          "_connectsTo": 2
+        },
+        {
+          "_text": "No",
+          "_connectsTo": 3
+        }
+      ],
+      "_offsetX": 580,
+      "_offsetY": 80,
+      "_width": 504,
+      "_height": 372
+    },
+    {
+      "_id": 2,
+      "_name": "Choice 1",
+      "_text": "Yes",
+      "_textSpeed": 0.1,
+      "_portraitPath": null,
+      "_connectsTo": -1,
+      "_choices": [],
+      "_offsetX": 1200,
+      "_offsetY": -40,
+      "_width": 504,
+      "_height": 296
+    },
+    {
+      "_id": 3,
+      "_name": "Le Choice 2",
+      "_text": "No",
+      "_textSpeed": 0.1,
+      "_portraitPath": null,
+      "_connectsTo": -1,
+      "_choices": [],
+      "_offsetX": 1180,
+      "_offsetY": 440,
+      "_width": 504,
+      "_height": 296
+    }
+  ]
+}

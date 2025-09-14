@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Just Another Dialogue Editor", "Just Another Dialogue Editor.csproj", "{F162A5F9-7BDB-445F-87F9-AEFF7915691C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Just Another Dialogue Editor", "Just Another Dialogue Editor.csproj", "{DF9588A9-44EE-4067-A744-1A38FC798891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	ExportRelease|Any CPU = ExportRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F162A5F9-7BDB-445F-87F9-AEFF7915691C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F162A5F9-7BDB-445F-87F9-AEFF7915691C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F162A5F9-7BDB-445F-87F9-AEFF7915691C}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
-		{F162A5F9-7BDB-445F-87F9-AEFF7915691C}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{F162A5F9-7BDB-445F-87F9-AEFF7915691C}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{F162A5F9-7BDB-445F-87F9-AEFF7915691C}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{DF9588A9-44EE-4067-A744-1A38FC798891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9588A9-44EE-4067-A744-1A38FC798891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9588A9-44EE-4067-A744-1A38FC798891}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{DF9588A9-44EE-4067-A744-1A38FC798891}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{DF9588A9-44EE-4067-A744-1A38FC798891}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{DF9588A9-44EE-4067-A744-1A38FC798891}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
 	EndGlobalSection
 EndGlobal

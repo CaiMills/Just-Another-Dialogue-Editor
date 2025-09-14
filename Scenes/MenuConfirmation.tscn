@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcuanj6jd5a37"]
 
-[ext_resource type="Script" uid="uid://dnhphs3if5qyk" path="res://Scenes/MenuConfirmation.cs" id="1_novhh"]
+[ext_resource type="Script" uid="uid://dnhphs3if5qyk" path="res://Scripts/MenuConfirmation.cs" id="1_novhh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p30wr"]
 bg_color = Color(0.207843, 0.207843, 0.207843, 0.407843)
@@ -15,17 +15,10 @@ content_margin_left = 200.0
 content_margin_right = 200.0
 bg_color = Color(0.0588235, 0.105882, 0.14902, 1)
 
-[node name="MenuConfirmation" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="MenuConfirmation" type="CanvasLayer"]
 script = ExtResource("1_novhh")
 
 [node name="Background" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -34,15 +27,14 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_p30wr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -533.0
+offset_left = -539.0
 offset_top = -184.0
-offset_right = 545.0
+offset_right = 551.0
 offset_bottom = 301.0
 grow_horizontal = 2
 grow_vertical = 2

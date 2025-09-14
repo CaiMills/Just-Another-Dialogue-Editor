@@ -20,15 +20,10 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_0v7gd"]
 
-[node name="Dialogue" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Dialogue" type="CanvasLayer"]
 script = ExtResource("1_hecdn")
 
 [node name="DialogueBox" type="Panel" parent="."]
-layout_mode = 0
 offset_left = 497.0
 offset_top = 728.0
 offset_right = 942.0
@@ -60,20 +55,19 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
 [node name="NameBox" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 167.0
-offset_top = 632.0
-offset_right = 439.0
-offset_bottom = 664.0
+offset_left = 165.0
+offset_top = 627.0
+offset_right = 437.0
+offset_bottom = 659.0
 scale = Vector2(2.88273, 2.7366)
 theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
 
 [node name="NameText" type="RichTextLabel" parent="NameBox"]
 layout_mode = 0
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 266.0
-offset_bottom = 29.0
+offset_left = 5.89719
+offset_top = 3.28876
+offset_right = 264.897
+offset_bottom = 29.2888
 theme = SubResource("Theme_0v7gd")
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
@@ -82,7 +76,6 @@ fit_content = true
 vertical_alignment = 1
 
 [node name="PortraitBox" type="Panel" parent="."]
-layout_mode = 0
 offset_left = 165.0
 offset_top = 728.0
 offset_right = 276.0

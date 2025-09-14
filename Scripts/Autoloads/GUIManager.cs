@@ -6,8 +6,6 @@ public partial class GUIManager : CanvasLayer
     
     private string[] _guiComponents =
     [
-        "res://Scenes/MainMenu.tscn",
-        "res://Scenes/DialogueGraph.tscn",
         "res://Scenes/Dialogue.tscn",
         "res://Scenes/MenuConfirmation.tscn"
     ];
@@ -31,10 +29,10 @@ public partial class GUIManager : CanvasLayer
         foreach (string gui in _guiComponents)
         {
             var newGui = ResourceLoader.Load<PackedScene>(gui).Instantiate();
-            if (newGui is Control controlGui)
+            if (newGui is CanvasLayer canvasGui)
             {
-                AddChild(controlGui);
-                controlGui.Visible = false;
+                AddChild(canvasGui);
+                canvasGui.Visible = false;
             }
         }
         
@@ -42,32 +40,32 @@ public partial class GUIManager : CanvasLayer
         Connect("DialogueActivate", new Callable(this, nameof(DialogueGui)));
     }
 
-    public void ChangeGui(Control currentGui, string newGui, bool closePrevious = true)
+    public void ChangeGui(CanvasLayer currentGui, string newGui, bool closePrevious = true)
     {
         if (closePrevious)
         {
             currentGui.Visible = false;
         }
-        Control gui = GetNode<Control>(newGui);
+        CanvasLayer gui = GetNode<CanvasLayer>(newGui);
         gui.Visible = true;
     }
 
-    public void CloseCurrentGui(Control currentGui)
+    public void CloseCurrentGui(CanvasLayer currentGui)
     {
         currentGui.Visible = false;
     }
 
     public void CloseAllGui()
     {
-        foreach (Control c in GetChildren())
+        foreach (CanvasLayer gui in GetChildren())
         {
-            c.Visible = false;
+            gui.Visible = false;
         }
     }
     
     private void DialogueGui(string jsonPath)
     {
-        Control dialogue = GetNode<Control>("Dialogue");
+        CanvasLayer dialogue = GetNode<CanvasLayer>("Dialogue");
         dialogue.Visible = true;
     }
 }

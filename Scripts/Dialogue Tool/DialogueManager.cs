@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Text.Json;
 
-public partial class DialogueManager : Control
+public partial class DialogueManager : CanvasLayer
 {
     [ExportCategory("Dialogue UI")]
     private Panel _dialogueBox;

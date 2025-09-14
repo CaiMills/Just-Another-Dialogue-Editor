@@ -16,14 +16,6 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fkxa1"]
-bg_color = Color(0, 0.371263, 0.582393, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u48pm"]
 bg_color = Color(0, 0.371263, 0.582393, 1)
 border_width_left = 2
@@ -31,6 +23,9 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5g3c"]
+bg_color = Color(0.70595, 0, 0, 1)
 
 [node name="DialogueGraph" type="Control"]
 layout_mode = 3
@@ -55,14 +50,12 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 38.0
-offset_bottom = 4.0
+offset_top = 34.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/port_hotzone_inner_extent = 0
 theme_override_constants/connection_hover_thickness = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pyfxn")
-scroll_offset = Vector2(0, -34)
 right_disconnects = true
 minimap_enabled = false
 minimap_size = Vector2(60, 50)
@@ -74,7 +67,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 33.0
 grow_horizontal = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 2
 
 [node name="AddDialogueButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -99,14 +92,6 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
 text = "       Save       "
 
-[node name="TestButton" type="Button" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-tooltip_text = "Opens a dialogue scene using this file (this will force a save)."
-theme_override_font_sizes/font_size = 21
-theme_override_styles/normal = SubResource("StyleBoxFlat_fkxa1")
-text = "       Test       "
-
 [node name="ClearAllButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
@@ -122,7 +107,8 @@ tooltip_text = "Closes project and returns to main menu."
 theme_override_constants/outline_size = 10
 theme_override_constants/h_separation = 1815
 theme_override_font_sizes/font_size = 21
-text = " X "
+theme_override_styles/normal = SubResource("StyleBoxFlat_j5g3c")
+text = "  x  "
 
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]
 [connection signal="delete_nodes_request" from="GraphEdit" to="." method="_on_graph_edit_delete_nodes_request"]

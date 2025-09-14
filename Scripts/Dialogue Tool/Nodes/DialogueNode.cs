@@ -105,13 +105,13 @@ public partial class DialogueNode : GraphNode
         SetSlot(index + 2, false, 0, new Color(1, 0, 0, 1), true, 0, new Color(1, 0, 0, 1));
         
         // Adds the choice deletion button to the last choice
-        DeleteChoiceButton();
+        //DeleteChoiceButton();
     }
 
     /// <summary>
-    /// This handles instantiating the delete button on the last choice
+    /// This handles instantiating the delete button on the last choice, I couldn't get this to work but I will leave in what I have attempted
     /// </summary>
-    private void DeleteChoiceButton()
+    /*private void DeleteChoiceButton()
     {
         // TODO
         // Make it remove the height added from the choices (for the first choice as it works for all the others)
@@ -176,7 +176,7 @@ public partial class DialogueNode : GraphNode
             choiceContainer.AddChild(choiceDeleteButton);
             choiceContainer.MoveChild(choiceDeleteButton, 0);
         }
-    }
+    }*/
     
     private void _on_name_box_text_changed(string newName)
     {
