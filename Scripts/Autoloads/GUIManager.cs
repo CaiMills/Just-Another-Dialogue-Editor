@@ -42,7 +42,7 @@ public partial class GUIManager : CanvasLayer
         Connect("DialogueActivate", new Callable(this, nameof(DialogueGui)));
     }
 
-    public void ChangeGui(Control currentGui, string newGui, bool closePrevious)
+    public void ChangeGui(Control currentGui, string newGui, bool closePrevious = true)
     {
         if (closePrevious)
         {
@@ -50,6 +50,19 @@ public partial class GUIManager : CanvasLayer
         }
         Control gui = GetNode<Control>(newGui);
         gui.Visible = true;
+    }
+
+    public void CloseCurrentGui(Control currentGui)
+    {
+        currentGui.Visible = false;
+    }
+
+    public void CloseAllGui()
+    {
+        foreach (Control c in GetChildren())
+        {
+            c.Visible = false;
+        }
     }
     
     private void DialogueGui(string jsonPath)
