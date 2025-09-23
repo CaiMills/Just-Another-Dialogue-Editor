@@ -31,7 +31,18 @@ public partial class MainMenu : Control
     {
         if (FileAccess.FileExists(path))
         {
-            GUIManager._instance.EmitSignal(nameof(GUIManager.DialogueActivate), path);
+            if (path.GetFile().EndsWith(".json"))
+            {
+                GUIManager._instance.EmitSignal(nameof(GUIManager.DialogueActivate), path);
+            }
+            else
+            {
+                GD.PushWarning("No valid file was selected.");
+            }
+        }
+        else
+        {
+            GD.PushWarning("No file was found at this path.");
         }
     }
     

@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc4uxgj50fd4l"]
+[gd_scene load_steps=7 format=3 uid="uid://bc4uxgj50fd4l"]
 
 [ext_resource type="Script" uid="uid://55x2ppevrgei" path="res://Scripts/Dialogue Tool/DialogueManager.cs" id="1_hecdn"]
+[ext_resource type="Texture2D" uid="uid://bgntkm5q2e0e1" path="res://Assets/Character Portraits/icon.svg" id="2_2842h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2842h"]
+bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1kyd"]
 bg_color = Color(7.70092e-07, 0.244313, 0.347775, 1)
@@ -20,14 +24,31 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_0v7gd"]
 
-[node name="Dialogue" type="CanvasLayer"]
+[node name="Dialogue" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_hecdn")
 
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2842h")
+
 [node name="DialogueBox" type="Panel" parent="."]
-offset_left = 497.0
-offset_top = 728.0
-offset_right = 942.0
-offset_bottom = 840.0
+offset_left = 475.0
+offset_top = 714.0
+offset_right = 920.0
+offset_bottom = 826.0
 scale = Vector2(2.88273, 2.73658)
 theme_override_styles/panel = SubResource("StyleBoxFlat_r1kyd")
 
@@ -55,10 +76,10 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
 [node name="NameBox" type="Panel" parent="."]
-offset_left = 165.0
-offset_top = 627.0
-offset_right = 437.0
-offset_bottom = 659.0
+offset_left = 143.0
+offset_top = 613.0
+offset_right = 415.0
+offset_bottom = 645.0
 scale = Vector2(2.88273, 2.7366)
 theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
 
@@ -76,10 +97,10 @@ fit_content = true
 vertical_alignment = 1
 
 [node name="PortraitBox" type="Panel" parent="."]
-offset_left = 165.0
-offset_top = 728.0
-offset_right = 276.0
-offset_bottom = 840.0
+offset_left = 143.0
+offset_top = 714.0
+offset_right = 254.0
+offset_bottom = 826.0
 scale = Vector2(2.88273, 2.73658)
 theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
 
@@ -89,4 +110,5 @@ offset_left = 4.0
 offset_top = 4.0
 offset_right = 107.0
 offset_bottom = 108.0
+texture = ExtResource("2_2842h")
 expand_mode = 1

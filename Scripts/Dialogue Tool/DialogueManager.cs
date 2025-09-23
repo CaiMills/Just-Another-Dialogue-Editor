@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Text.Json;
 
-public partial class DialogueManager : CanvasLayer
+public partial class DialogueManager : Control
 {
     [ExportCategory("Dialogue UI")]
     private Panel _dialogueBox;
@@ -43,7 +43,7 @@ public partial class DialogueManager : CanvasLayer
     
     public override void _Process(double delta)
     {
-        if (Input.IsActionJustPressed("ui_accept") && !_isChoosing)
+        if (Input.IsActionJustPressed("ui_accept") && GUIManager._instance._isMenuActive && !_isChoosing)
         {
             if (_dialogueText.VisibleCharacters == _dialogueText.Text.Length)
             {
@@ -77,7 +77,8 @@ public partial class DialogueManager : CanvasLayer
             {
                 _lineId = 0;
                 _currentLine = _script.conversation[_lineId];
-                
+
+                GUIManager._instance._isMenuActive = true;
                 ClearDialogue();
                 Show();
 
@@ -194,6 +195,16 @@ public partial class DialogueManager : CanvasLayer
                 Alignment = HorizontalAlignment.Left,
                 AutowrapMode = TextServer.AutowrapMode.WordSmart,
             };
+            // Style Box Overrides
+            StyleBoxFlat normal = new StyleBoxFlat();
+            normal.BgColor = new Color(Color.Color8(15, 40, 51));
+            choice.AddThemeStyleboxOverride("normal", normal);
+            
+            StyleBoxFlat hover = new StyleBoxFlat();
+            hover.BgColor = new Color(Color.Color8(25, 59, 74));
+            choice.AddThemeStyleboxOverride("hover", hover);
+            
+            // Font Overrides
             Font font = ResourceLoader.Load<FontFile>("res://Placeholder/Renogare-Regular.otf"); // NOTE: Font is a placeholder
             choice.AddThemeFontOverride("font", font);
             choice.AddThemeFontSizeOverride("font_size", 18);
@@ -247,6 +258,7 @@ public partial class DialogueManager : CanvasLayer
     /// </summary>
     private void EndConversation()
     {
+        GUIManager._instance._isMenuActive = false;
         this.Hide();
         _script.conversation.Clear();
         _lineId = 0;
