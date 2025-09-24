@@ -45,6 +45,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2842h")
 
 [node name="DialogueBox" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 475.0
 offset_top = 714.0
 offset_right = 920.0
@@ -76,6 +77,7 @@ size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
 [node name="NameBox" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 143.0
 offset_top = 613.0
 offset_right = 415.0
@@ -97,6 +99,7 @@ fit_content = true
 vertical_alignment = 1
 
 [node name="PortraitBox" type="Panel" parent="."]
+layout_mode = 0
 offset_left = 143.0
 offset_top = 714.0
 offset_right = 254.0
