@@ -11,10 +11,10 @@ The order the conversation is read in is determined first by the node with the l
 
 ### Each dialogue node has the following:
 * Character Name, which is self-explanatory.
-*A text box that is where the actual dialogue for that part of the conversation goes.
-*A text speed box which determines how fast each letter of the conversation is read (this is for the typewriter effect), with 0 being instant and 1 being slow.
-*An add portrait button, which will allow you to select an image within the project's files that will be used to represent the character for this part of the conversation. **IMPORTANT NOTE: Any pictures you intend to use should be in the same file structure as the one set up in this project; otherwise, it will produce an error.**
-*A '+ Choice' button, which adds a choice that will be shown after the dialogue of this section is read. This choice will allow for divergent paths in the conversation, which will be determined by whichever dialogue nodes the choices are tethered to. Any number of choices can be added.
+* A text box that is where the actual dialogue for that part of the conversation goes.
+* A text speed box which determines how fast each letter of the conversation is read (this is for the typewriter effect), with 0 being instant and 1 being slow.
+* An add portrait button, which will allow you to select an image within the project's files that will be used to represent the character for this part of the conversation. **IMPORTANT NOTE: Any pictures you intend to use should be in the same file structure as the one set up in this project; otherwise, it will produce an error.**
+* A '+ Choice' button, which adds a choice that will be shown after the dialogue of this section is read. This choice will allow for divergent paths in the conversation, which will be determined by whichever dialogue nodes the choices are tethered to. Any number of choices can be added.
 
 The final few buttons at the top of the screen include a 'Save' button which simply serialises the conversation data into a .json format so that it can be deserialised in a separate dialogue user interface; then there's 'Load', which recreates the flowchart of any compatible .json files; a 'Clear All' button, which wipes all the dialogue nodes in the chart; and finally a red 'X' button in the top right corner, which exits the graph.
 
