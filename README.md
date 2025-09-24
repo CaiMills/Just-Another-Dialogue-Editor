@@ -1,4 +1,4 @@
-# Just-Another-Dialogue-Editor
+# Just Another Dialogue Editor
 
 'Just Another Dialogue Editor', or 'JADE', is an open-source custom dialogue creation tool using Godot 4.0+, but it can be used for any dialogue system that uses JSON deserialisation. It works by allowing for the creation or loading of 'Conversations' that contain many different smaller sections of the conversations, with the reading order being decided by both the node's ID and the nodes it's connected to, and then taking this 'Conversation' and serialising it into a JSON file for it to be parsed by a dialogue reader. This project includes a simple dialogue reader built in so that you can test your conversations dynamically.
 
