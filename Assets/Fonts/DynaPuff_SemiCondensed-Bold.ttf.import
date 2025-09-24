@@ -13,14 +13,15 @@ dest_files=["res://.godot/imported/DynaPuff_SemiCondensed-Bold.ttf-075306b679b16
 [params]
 
 Rendering=null
-antialiasing=1
-generate_mipmaps=false
+antialiasing=0
+generate_mipmaps=true
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+modulate_color_glyphs=false
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

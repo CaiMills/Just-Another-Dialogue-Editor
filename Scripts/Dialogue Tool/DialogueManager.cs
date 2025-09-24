@@ -205,7 +205,7 @@ public partial class DialogueManager : Control
             choice.AddThemeStyleboxOverride("hover", hover);
             
             // Font Overrides
-            Font font = ResourceLoader.Load<FontFile>("res://Placeholder/Renogare-Regular.otf"); // NOTE: Font is a placeholder
+            Font font = ResourceLoader.Load<FontFile>("res://Assets/Fonts/RocknRollOne-Regular.ttf"); // NOTE: Font is a placeholder
             choice.AddThemeFontOverride("font", font);
             choice.AddThemeFontSizeOverride("font_size", 18);
             _dialogueBox.GetNode<VBoxContainer>("ScrollContainer/ChoicesVBoxContainer").AddChild(choice);

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bc4uxgj50fd4l"]
+[gd_scene load_steps=8 format=3 uid="uid://bc4uxgj50fd4l"]
 
 [ext_resource type="Script" uid="uid://55x2ppevrgei" path="res://Scripts/Dialogue Tool/DialogueManager.cs" id="1_hecdn"]
 [ext_resource type="Texture2D" uid="uid://bgntkm5q2e0e1" path="res://Assets/Character Portraits/icon.svg" id="2_2842h"]
+[ext_resource type="FontFile" uid="uid://wt015uhww250" path="res://Assets/Fonts/RocknRollOne-Regular.ttf" id="2_cq6to"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2842h"]
 bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
@@ -53,49 +54,57 @@ offset_bottom = 826.0
 scale = Vector2(2.88273, 2.73658)
 theme_override_styles/panel = SubResource("StyleBoxFlat_r1kyd")
 
-[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
-layout_mode = 0
-offset_left = 7.0
-offset_top = 4.0
-offset_right = 439.0
-offset_bottom = 107.0
-theme_override_font_sizes/normal_font_size = 18
-bbcode_enabled = true
-text = "Dialogue Text Goes Here..."
-fit_content = true
-
 [node name="ScrollContainer" type="ScrollContainer" parent="DialogueBox"]
-layout_mode = 0
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 441.0
-offset_bottom = 108.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.1627197
+offset_top = 4.0195923
+offset_right = -3.751648
+offset_bottom = -4.201233
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ChoicesVBoxContainer" type="VBoxContainer" parent="DialogueBox/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 4.509613
+offset_top = 4.0
+offset_right = 440.55457
+offset_bottom = 108.164215
+theme_override_fonts/normal_font = ExtResource("2_cq6to")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Dialogue Text Goes Here..."
+fit_content = true
+
 [node name="NameBox" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 143.0
-offset_top = 613.0
-offset_right = 415.0
-offset_bottom = 645.0
+offset_top = 609.00006
+offset_right = 415.3113
+offset_bottom = 644.4455
 scale = Vector2(2.88273, 2.7366)
 theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
 
 [node name="NameText" type="RichTextLabel" parent="NameBox"]
 layout_mode = 0
-offset_left = 5.89719
-offset_top = 3.28876
-offset_right = 264.897
-offset_bottom = 29.2888
+offset_left = 4.1627197
+offset_top = 4.019562
+offset_right = 268.1486
+offset_bottom = 31.38498
 theme = SubResource("Theme_0v7gd")
+theme_override_fonts/normal_font = ExtResource("2_cq6to")
 theme_override_font_sizes/normal_font_size = 18
 bbcode_enabled = true
 text = "Character Name..."
 fit_content = true
+scroll_active = false
 vertical_alignment = 1
 
 [node name="PortraitBox" type="Panel" parent="."]
