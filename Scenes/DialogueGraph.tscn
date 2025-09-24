@@ -71,7 +71,6 @@ grow_vertical = 2
 theme_override_constants/connection_hover_thickness = 0
 theme_override_constants/port_hotzone_inner_extent = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pyfxn")
-scroll_offset = Vector2(0, -36)
 right_disconnects = true
 minimap_enabled = false
 minimap_size = Vector2(60, 50)
@@ -96,7 +95,7 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
-text = " + Dialogue "
+text = "  + Dialogue  "
 
 [node name="LoadFileButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -118,7 +117,7 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
-text = "       Save       "
+text = "      Save      "
 
 [node name="ClearAllButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
@@ -129,7 +128,7 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_u48pm")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
-text = "   Clear All   "
+text = "    Clear All    "
 
 [node name="ExitButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
