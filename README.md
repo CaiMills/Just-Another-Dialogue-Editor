@@ -9,8 +9,8 @@ First off, press start to open up a blank conversation, and then add dialogue no
 
 The order the conversation is read in is determined first by the node with the lowest ID (this will always be 0) and then by whichever node it's tethered to. To tether a node to another, left-click on the read sockets on the right of the dialogue you want to start from, and then drag it to the left socket of the node you want to be next.
 
-Each dialogue node has the following:
-*Character Name, which is self-explanatory.
+### Each dialogue node has the following:
+* Character Name, which is self-explanatory.
 *A text box that is where the actual dialogue for that part of the conversation goes.
 *A text speed box which determines how fast each letter of the conversation is read (this is for the typewriter effect), with 0 being instant and 1 being slow.
 *An add portrait button, which will allow you to select an image within the project's files that will be used to represent the character for this part of the conversation. **IMPORTANT NOTE: Any pictures you intend to use should be in the same file structure as the one set up in this project; otherwise, it will produce an error.**
