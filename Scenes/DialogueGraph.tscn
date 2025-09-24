@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl30j0x7m1dto"]
+[gd_scene load_steps=8 format=3 uid="uid://bl30j0x7m1dto"]
 
 [ext_resource type="Script" uid="uid://dif6xlbca88mu" path="res://Scripts/Dialogue Tool/Window/DialogueManagerEditorWindow.cs" id="1_j5g3c"]
+[ext_resource type="FontFile" uid="uid://wt015uhww250" path="res://Assets/Fonts/RocknRollOne-Regular.ttf" id="2_1q6cv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0h1eu"]
 bg_color = Color(0.099986, 0.099986, 0.099986, 1)
@@ -50,12 +51,13 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 34.0
+offset_top = 35.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/port_hotzone_inner_extent = 0
 theme_override_constants/connection_hover_thickness = 0
+theme_override_constants/port_hotzone_inner_extent = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pyfxn")
+scroll_offset = Vector2(0, -36)
 right_disconnects = true
 minimap_enabled = false
 minimap_size = Vector2(60, 50)
@@ -65,13 +67,17 @@ show_zoom_label = true
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 33.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 35.0
 grow_horizontal = 2
 theme_override_constants/separation = 2
 
 [node name="AddDialogueButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Creates a new line of dialogue in your conversation. (Right Mouse Button)"
+theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
 text = " + Dialogue "
@@ -80,6 +86,7 @@ text = " + Dialogue "
 layout_mode = 2
 size_flags_horizontal = 0
 tooltip_text = "Loads a serialized json file (must have been created by this tool)."
+theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
 text = "      Load       "
@@ -88,6 +95,7 @@ text = "      Load       "
 layout_mode = 2
 size_flags_horizontal = 8
 tooltip_text = "Serializes this conversation to a .json file for it to be deserialized in your scene."
+theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
 text = "       Save       "
@@ -96,6 +104,7 @@ text = "       Save       "
 layout_mode = 2
 size_flags_horizontal = 10
 tooltip_text = "Serializes this conversation to a .json file for it to be deserialized in your scene."
+theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_u48pm")
 text = "   Clear All   "
@@ -103,9 +112,11 @@ text = "   Clear All   "
 [node name="ExitButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-tooltip_text = "Closes project and returns to main menu."
+tooltip_text = "Closes current project and returns to main menu."
+focus_mode = 0
 theme_override_constants/outline_size = 10
 theme_override_constants/h_separation = 1815
+theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_j5g3c")
 text = "  x  "

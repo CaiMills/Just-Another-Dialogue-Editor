@@ -208,6 +208,8 @@ public partial class DialogueManager : Control
             hover.SetContentMargin(Side.Right, 2);
             choice.AddThemeStyleboxOverride("hover", hover);
             
+            choice.AddThemeStyleboxOverride("focus", new StyleBoxEmpty());
+            
             // Font Overrides
             Font font = ResourceLoader.Load<FontFile>("res://Assets/Fonts/RocknRollOne-Regular.ttf"); // NOTE: Font is a placeholder
             choice.AddThemeFontOverride("font", font);
