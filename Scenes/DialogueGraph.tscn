@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bl30j0x7m1dto"]
+[gd_scene load_steps=11 format=3 uid="uid://bl30j0x7m1dto"]
 
 [ext_resource type="Script" uid="uid://dif6xlbca88mu" path="res://Scripts/Dialogue Tool/Window/DialogueManagerEditorWindow.cs" id="1_j5g3c"]
 [ext_resource type="FontFile" uid="uid://wt015uhww250" path="res://Assets/Fonts/RocknRollOne-Regular.ttf" id="2_1q6cv"]
@@ -17,6 +17,14 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gkb35"]
+bg_color = Color(0, 0.28627452, 0.4509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u48pm"]
 bg_color = Color(0, 0.371263, 0.582393, 1)
 border_width_left = 2
@@ -27,6 +35,12 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5g3c"]
 bg_color = Color(0.70595, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1q6cv"]
+bg_color = Color(0.56078434, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2m2i"]
+bg_color = Color(0.5593749, 0.000694623, 0.0003804736, 1)
 
 [node name="DialogueGraph" type="Control"]
 layout_mode = 3
@@ -80,6 +94,8 @@ tooltip_text = "Creates a new line of dialogue in your conversation. (Right Mous
 theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
 text = " + Dialogue "
 
 [node name="LoadFileButton" type="Button" parent="HBoxContainer"]
@@ -89,6 +105,8 @@ tooltip_text = "Loads a serialized json file (must have been created by this too
 theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
 text = "      Load       "
 
 [node name="SaveFileButton" type="Button" parent="HBoxContainer"]
@@ -98,20 +116,24 @@ tooltip_text = "Serializes this conversation to a .json file for it to be deseri
 theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_nscuq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
 text = "       Save       "
 
 [node name="ClearAllButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
 tooltip_text = "Serializes this conversation to a .json file for it to be deserialized in your scene."
 theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_u48pm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gkb35")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gkb35")
 text = "   Clear All   "
 
 [node name="ExitButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 10
 tooltip_text = "Closes current project and returns to main menu."
 focus_mode = 0
 theme_override_constants/outline_size = 10
@@ -119,6 +141,8 @@ theme_override_constants/h_separation = 1815
 theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
 theme_override_styles/normal = SubResource("StyleBoxFlat_j5g3c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1q6cv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l2m2i")
 text = "  x  "
 
 [connection signal="connection_request" from="GraphEdit" to="." method="_on_graph_edit_connection_request"]

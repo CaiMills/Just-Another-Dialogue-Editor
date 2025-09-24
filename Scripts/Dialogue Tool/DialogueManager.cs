@@ -208,6 +208,7 @@ public partial class DialogueManager : Control
             hover.SetContentMargin(Side.Right, 2);
             choice.AddThemeStyleboxOverride("hover", hover);
             
+            choice.AddThemeStyleboxOverride("pressed", hover);
             choice.AddThemeStyleboxOverride("focus", new StyleBoxEmpty());
             
             // Font Overrides
