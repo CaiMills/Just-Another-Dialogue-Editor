@@ -121,7 +121,7 @@ text = "      Save      "
 
 [node name="ClearAllButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 10
 tooltip_text = "Serializes this conversation to a .json file for it to be deserialized in your scene."
 theme_override_fonts/font = ExtResource("2_1q6cv")
 theme_override_font_sizes/font_size = 21
@@ -132,7 +132,7 @@ text = "    Clear All    "
 
 [node name="ExitButton" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 8
 tooltip_text = "Closes current project and returns to main menu."
 focus_mode = 0
 theme_override_constants/outline_size = 10
