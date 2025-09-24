@@ -22,9 +22,9 @@ public partial class DialogueManager : Control
     {
         // Gets the necessary nodes
         _dialogueBox = GetNode<Panel>("DialogueBox");
-        _dialogueText = GetNode<RichTextLabel>("DialogueBox/DialogueText");
+        _dialogueText = GetNode<RichTextLabel>("DialogueBox/MarginContainer/DialogueText");
         _nameBox = GetNode<Panel>("NameBox");
-        _nameText = GetNode<RichTextLabel>("NameBox/NameText");
+        _nameText = GetNode<RichTextLabel>("NameBox/MarginContainer/NameText");
         _portrait = GetNode<TextureRect>("PortraitBox/Portrait");
         
         // Connects it to the correct signal, so it knows when to activate

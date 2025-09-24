@@ -1,0 +1,312 @@
+{
+  "_conversation": [
+	{
+	  "_id": 0,
+	  "_name": "Tester",
+	  "_text": "[b]Hello[/b], and [i]welcome[/i] to the [color=red]demonstration[/color] of my [u]dialogue tool[/u], press [font_size=30]left mouse button[/font_size] to skip the typewriting of this line and then once again to skip to the next one.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 1,
+	  "_choices": [],
+	  "_offset": {
+		"x": 50.0,
+		"y": 124.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 1,
+	  "_name": "Tester",
+	  "_text": "I'm here to tell you about all the different functionalities of this system, although there will be no visuals as that would take too long.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 2,
+	  "_choices": [],
+	  "_offset": {
+		"x": 383.0,
+		"y": 127.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 2,
+	  "_name": "Tester",
+	  "_text": "First step to using the tool, look at the top part of the editor and open the 'Dialogue Manager' option on the tool bar, and click 'Flowchart'.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 3,
+	  "_choices": [],
+	  "_offset": {
+		"x": 711.0,
+		"y": 128.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 3,
+	  "_name": "Tester",
+	  "_text": "Here in this flowchart, you can create different dialogue nodes by pressing the \"+ Dialogue\" button.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 4,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1033.0,
+		"y": 130.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 4,
+	  "_name": "Tester",
+	  "_text": "These nodes act as different sentences in the conversation, all of which having all the variables that are needed for a basic conversation.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 5,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1361.0,
+		"y": 127.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 5,
+	  "_name": "Name Changed",
+	  "_text": "First off is the 'Character Name', it can be changed to whatever easily, like in this sentence.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 6,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1695.0,
+		"y": 127.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 6,
+	  "_name": "Tester",
+	  "_text": "Then theres the 'Character Portrait', so long as the sprites location is in the resources folder, it can be used, like in this sentence (test image).",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "res://Placeholder/HappyTest.png",
+	  "_connectsTo": 7,
+	  "_choices": [],
+	  "_offset": {
+		"x": 2021.0,
+		"y": 127.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 7,
+	  "_name": "Tester",
+	  "_text": "Then theres the 'Dialogue Text' box, thats where you put the actual sentence, like this one.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 8,
+	  "_choices": [],
+	  "_offset": {
+		"x": 47.0,
+		"y": 390.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 8,
+	  "_name": "Tester",
+	  "_text": "Then theres text speed, which determines how fast the typewriter effect is, with lower being faster.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 9,
+	  "_choices": [],
+	  "_offset": {
+		"x": 389.0,
+		"y": 393.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 9,
+	  "_name": "Tester",
+	  "_text": "And higher being slower",
+	  "_textSpeed": 0.30000001192092898,
+	  "_portraitPath": "",
+	  "_connectsTo": 10,
+	  "_choices": [],
+	  "_offset": {
+		"x": 725.0,
+		"y": 389.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 10,
+	  "_name": "Tester",
+	  "_text": "Then theres the 'Next Dialogue Box', which determines the order of how the flowchart is read during the deserialisation.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 11,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1044.0,
+		"y": 392.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 11,
+	  "_name": "Tester",
+	  "_text": "Then theres the small button with the 'x' on the top right, this deletes the current node.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 12,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1366.0,
+		"y": 391.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 12,
+	  "_name": "Tester",
+	  "_text": "Then theres the '+ Choice' button on the bottom of the node, this allows you to add branches that go to different nodes, like this;",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 13,
+	  "_choices": [
+		{
+		  "_text": "Wow thats so cool! I am going to now proceed to completely yap as i want to test whether the buttons box will match the size lalalalala i hope it is please",
+		  "_connectsTo": 13
+		},
+		{
+		  "_text": "Thats lame....",
+		  "_connectsTo": 14
+		}
+	  ],
+	  "_offset": {
+		"x": 1696.0,
+		"y": 394.0
+	  },
+	  "_width": 310.0,
+	  "_height": 350.0
+	},
+	{
+	  "_id": 13,
+	  "_name": "Tester",
+	  "_text": "Thanks for agreeing.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 15,
+	  "_choices": [],
+	  "_offset": {
+		"x": 2083.0,
+		"y": 383.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 14,
+	  "_name": "Tester",
+	  "_text": "Well I thought it was pretty cool...",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 15,
+	  "_choices": [],
+	  "_offset": {
+		"x": 2088.0,
+		"y": 656.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 15,
+	  "_name": "Tester",
+	  "_text": "Anyway, once your happy with your conversation, save it by pressing the 'Save' button, and choosing a file path.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 16,
+	  "_choices": [],
+	  "_offset": {
+		"x": 47.0,
+		"y": 660.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 16,
+	  "_name": "Tester",
+	  "_text": "Afterwards, take the newly generated json file, and put it on one of the NPC's in the example scene, like myself.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 17,
+	  "_choices": [],
+	  "_offset": {
+		"x": 381.0,
+		"y": 656.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 17,
+	  "_name": "Tester",
+	  "_text": "Finally, if you want to load a flowchart thats been serialised already, press the 'Load' button, and select the correct file, and it will recreated.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 18,
+	  "_choices": [],
+	  "_offset": {
+		"x": 717.0,
+		"y": 656.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 18,
+	  "_name": "Tester",
+	  "_text": "And thats all you need to know, look at the 'READ ME.txt' if you want to read a more comprehensive guide.",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 19,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1048.0,
+		"y": 656.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	},
+	{
+	  "_id": 19,
+	  "_name": "Tester",
+	  "_text": "Try the system for yourself!!! :)",
+	  "_textSpeed": 0.05000000074505806,
+	  "_portraitPath": "",
+	  "_connectsTo": 20,
+	  "_choices": [],
+	  "_offset": {
+		"x": 1412.0,
+		"y": 861.0
+	  },
+	  "_width": 310.0,
+	  "_height": 250.0
+	}
+  ]}

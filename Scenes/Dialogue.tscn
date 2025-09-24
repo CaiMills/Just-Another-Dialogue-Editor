@@ -7,14 +7,6 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2842h"]
 bg_color = Color(0.0646965, 0.0646965, 0.0646965, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1kyd"]
-bg_color = Color(7.70092e-07, 0.244313, 0.347775, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0, 0, 0, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0wq4"]
 bg_color = Color(0, 0.243137, 0.34902, 1)
 border_width_left = 4
@@ -24,6 +16,14 @@ border_width_bottom = 4
 border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Theme" id="Theme_0v7gd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1kyd"]
+bg_color = Color(7.70092e-07, 0.244313, 0.347775, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
 
 [node name="Dialogue" type="Control"]
 layout_mode = 3
@@ -45,6 +45,35 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2842h")
 
+[node name="NameBox" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 609.00006
+offset_right = 415.3113
+offset_bottom = 644.4455
+scale = Vector2(2.88273, 2.7366)
+theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
+
+[node name="MarginContainer" type="MarginContainer" parent="NameBox"]
+layout_mode = 0
+offset_left = 4.1627197
+offset_top = 4.019562
+offset_right = 268.1486
+offset_bottom = 31.79126
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_right = 2
+
+[node name="NameText" type="RichTextLabel" parent="NameBox/MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_0v7gd")
+theme_override_fonts/normal_font = ExtResource("2_cq6to")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Character Name..."
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
 [node name="DialogueBox" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 475.0
@@ -53,6 +82,23 @@ offset_right = 920.0
 offset_bottom = 826.0
 scale = Vector2(2.88273, 2.73658)
 theme_override_styles/panel = SubResource("StyleBoxFlat_r1kyd")
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogueBox"]
+layout_mode = 0
+offset_left = 4.1627207
+offset_top = 4.0196157
+offset_right = 440.9015
+offset_bottom = 107.79879
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_right = 2
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueBox/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_cq6to")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Dialogue Text Goes Here..."
+fit_content = true
 
 [node name="ScrollContainer" type="ScrollContainer" parent="DialogueBox"]
 layout_mode = 1
@@ -70,42 +116,6 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
-
-[node name="DialogueText" type="RichTextLabel" parent="DialogueBox"]
-layout_mode = 0
-offset_left = 4.509613
-offset_top = 4.0
-offset_right = 440.55457
-offset_bottom = 108.164215
-theme_override_fonts/normal_font = ExtResource("2_cq6to")
-theme_override_font_sizes/normal_font_size = 18
-bbcode_enabled = true
-text = "Dialogue Text Goes Here..."
-fit_content = true
-
-[node name="NameBox" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 143.0
-offset_top = 609.00006
-offset_right = 415.3113
-offset_bottom = 644.4455
-scale = Vector2(2.88273, 2.7366)
-theme_override_styles/panel = SubResource("StyleBoxFlat_m0wq4")
-
-[node name="NameText" type="RichTextLabel" parent="NameBox"]
-layout_mode = 0
-offset_left = 4.1627197
-offset_top = 4.019562
-offset_right = 268.1486
-offset_bottom = 31.38498
-theme = SubResource("Theme_0v7gd")
-theme_override_fonts/normal_font = ExtResource("2_cq6to")
-theme_override_font_sizes/normal_font_size = 18
-bbcode_enabled = true
-text = "Character Name..."
-fit_content = true
-scroll_active = false
-vertical_alignment = 1
 
 [node name="PortraitBox" type="Panel" parent="."]
 layout_mode = 0
