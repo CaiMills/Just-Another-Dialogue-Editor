@@ -198,10 +198,14 @@ public partial class DialogueManager : Control
             // Style Box Overrides
             StyleBoxFlat normal = new StyleBoxFlat();
             normal.BgColor = new Color(Color.Color8(15, 40, 51));
+            normal.SetContentMargin(Side.Left, 2);
+            normal.SetContentMargin(Side.Right, 2);
             choice.AddThemeStyleboxOverride("normal", normal);
             
             StyleBoxFlat hover = new StyleBoxFlat();
             hover.BgColor = new Color(Color.Color8(25, 59, 74));
+            hover.SetContentMargin(Side.Left, 2);
+            hover.SetContentMargin(Side.Right, 2);
             choice.AddThemeStyleboxOverride("hover", hover);
             
             // Font Overrides
