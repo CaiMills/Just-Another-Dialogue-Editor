@@ -54,6 +54,7 @@ public partial class DialogueManagerEditorWindow : Control
         FileDialog fileDialog = new FileDialog
         {
             FileMode = FileDialog.FileModeEnum.OpenFile,
+            UseNativeDialog = true,
             RootSubfolder = "res://Assets",
             Filters = ["*.json ; JSON Files"]
         };
@@ -142,6 +143,7 @@ public partial class DialogueManagerEditorWindow : Control
         FileDialog fileDialog = new FileDialog
         {
             FileMode = FileDialog.FileModeEnum.SaveFile,
+            UseNativeDialog = true,
             RootSubfolder = "res://Assets",
             Filters = ["*.json ; JSON Files"]
         };
